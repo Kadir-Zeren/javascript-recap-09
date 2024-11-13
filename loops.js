@@ -47,6 +47,31 @@ for (let i in grades) {
     : equalOrBiggerThan50.push(grades[i]);
 }
 
-console.log(lessThan50);
-console.log(equalOrBiggerThan50);
-console.log(grades);
+// console.log(lessThan50);
+// console.log(equalOrBiggerThan50);
+// console.log(grades);
+
+// *------------------------------------------------------
+//* SORU: students dizisinde ogrenci isimleri saklanmaktadir.
+//* ogrencileri aramamizi saglayacak ve aranilan ogrenciden
+//* ne kadar sayida bulunuldugunu ana programa dondurecek bir
+//* fonksiyonu yaziniz. Eger aranilan isimde bir ogrenci yok ise
+//* fonksiyon "ogrenci bulunamadı" dondurulmelidir.
+// *------------------------------------------------------
+
+const students = ["ahmet", "mehmet", "ismet", "saffet", "ahmet", "saffet"];
+
+const findStudent = (name) => {
+  let counter = 0;
+  for (let student of students) {
+    if (student === name) {
+      //* aranan dizinin icindeki elemana esitse
+      counter++; //* sayaci bir arttir
+    }
+  }
+  return counter;
+};
+
+console.log(findStudent("ahmet"));
+console.log(findStudent("ismet"));
+console.log(findStudent("Alihan"));
